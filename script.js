@@ -97,7 +97,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 // Tabbed component
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
-  console.log(clicked);
+  // console.log(clicked);
 
   // Guard clause
   if (!clicked) return;
@@ -141,7 +141,7 @@ const navHeight = nav.getBoundingClientRect().height;
 const stickyNav = function (entries) {
   const [entry] = entries;
 
-  console.log(entry);
+  // console.log(entry);
   // Jika sudah intersect ke section lain maka muncul
   if (!entry.isIntersecting) {
     nav.classList.add('sticky');
@@ -278,7 +278,6 @@ const slider = function () {
   btnLeft.addEventListener('click', prevSlide);
 
   document.addEventListener('keydown', function (e) {
-    console.log(e);
     if (e.key === 'ArrowLeft') prevSlide();
     e.key === 'ArrowRight' && nextSlide();
   });
